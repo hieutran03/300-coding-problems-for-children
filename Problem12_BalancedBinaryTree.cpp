@@ -7,7 +7,10 @@ public:
         int a = HeightandCheck(root->left, check);
         int b = HeightandCheck(root->right, check);
         if(abs(a-b) > 1)
+        {
             check = 0;
+            return check; // This 'return' to stop the funcion, you can replace a random number instead! 
+        }
         return max(a,b)+1;
     }
     
